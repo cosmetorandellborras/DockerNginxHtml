@@ -30,4 +30,23 @@ localhost:8080
 Si todo ha ido bien tenemos que visualizar el mensaje de bienvenida de Nginx
 ![landingNginx](https://github.com/cosmetorandellborras/DockerNginxHtml/blob/main/landingNginx.png)
 
+Antes de pasar al paso 3, pararemos el microservicio Nginx con el siguiente comando
+
+~~~
+docker stop web
+~~~
+
+## Paso 3 - Creación del directorio y html
+
+En este paso crearemos un directorio que almacenará nuestro html.
+Para ello creamos un directorio en nuestra carpeta de Documentos que llamaremos nginx, y dentro de este una carpeta que llamaremos "www".
+
+![Directorio](https://github.com/cosmetorandellborras/DockerNginxHtml/blob/main/Directorio.png)
+
+Seguidamente crearemos un archivo html dentro del directorio "www" creado en el paso anterior.
+![nano1](https://github.com/cosmetorandellborras/DockerNginxHtml/blob/main/nano.png)
+![nano2](https://github.com/cosmetorandellborras/DockerNginxHtml/blob/main/nano2.png)
+
+## Paso 4 - Iniciar contenedor Nginx con html personalizado
+
 
