@@ -49,4 +49,17 @@ Seguidamente crearemos un archivo html dentro del directorio "www" creado en el 
 
 ## Paso 4 - Iniciar contenedor Nginx con html personalizado
 
+Para iniciar el contenedor Nginx con nuestro html personalizado que hemos guardado en el directorio creado en el paso anterior, iniciaremos el contenedor con un comando que montara nuestro directorio local en el contenedor Nginx, concretamente en la ruta /usr/share/nginx/html.
 
+~~~
+docker run --rm -d -p 8080:80 --name web -v ~/Documents/nginx/www:/usr/share/nginx/html nginx
+~~~
+
+![dockerrun2](https://github.com/cosmetorandellborras/DockerNginxHtml/blob/main/dockerrun2.png)
+
+Ahora para comprobar que efectivamente todo funciona correctamente, volveremos a nuestro navegador e ingresaremos la siguiente dirección:
+~~~
+localhost:8080
+~~~
+![htmlfinal](https://github.com/cosmetorandellborras/DockerNginxHtml/blob/main/htmlfinal.png)
+Si todo ha ido bien, debemos de visualizar nuestro html personalizado
